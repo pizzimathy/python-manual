@@ -2,7 +2,7 @@
 
 This is the definitive guide to setting up Python on a Macintosh. The bold sections are the ones that contain just the bare essentials, but the other stuff is pretty interesting as well (feel free to skim).
 
-##Table of Contents
+## Table of Contents
 1. [Prerequisites](#1)
 	- [Reading](#1.0)
 	- [UNIX-flavored](#1.1)
