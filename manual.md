@@ -133,7 +133,7 @@ To install Python 3, run
 
 `$ brew install python3`. Again, for any errors, the Errors section.
 
-### <a name"3.3>Pip</a>
+### <a name"3.3">Pip</a>
 Pip is the package management ecosystem for Python. The Python Software Foundation keeps a registry of useful third-party Python addons that are typically open-source and publicly available.
 
 When using Python, just like in the warnings above, `pip` and `pip3` are different. Installing a package with `pip install <package>` can't be found by `python3` or `pip3`, and vice versa.
