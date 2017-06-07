@@ -124,14 +124,14 @@ To install Python 2, run
 
 `$ brew install python`.
 
-That's it! If you have errors, **GO TO THIS SECTION RIGHT HERE**.
+That's it! If you have errors, check the section on Errors.
 
 ### <a name="3.2">Python 3</a>
 Many new applications and frameworks are written with Python 3, as it is considered the standard Python implementation. Support for Python 2.7 will end in 2020 (per Guido van Rossum, Python's creator).
 
 To install Python 3, run
 
-`$ brew install python3`. Again, for any errors, check the next section.
+`$ brew install python3`. Again, for any errors, the Errors section.
 
 ### <a name"3.3>Pip</a>
 Pip is the package management ecosystem for Python. The Python Software Foundation keeps a registry of useful third-party Python addons that are typically open-source and publicly available.
