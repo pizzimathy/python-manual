@@ -75,20 +75,20 @@ Run
 
 `$ which ruby`
 
-which should return `/usr/bin/ruby/`. Next, we're going to check that you have git installed.
+which should return `/usr/bin/ruby`. Next, we're going to check that you have git installed.
 
 Git is a version control system, which is basically a tiny internal database that tracks all the changes made to a file (or set of files, or directory). Nearly every single minor or major collection of programs uses git to track changes and manage different versions of files (even Homebrew uses git to track itself). macOS comes with a pre-installed version of git, but it's old(er) and isn't as useful as newer versions. To check that git is installed, run
 
 `$ which git`,
 
-which should return `/usr/bin/git/`. Running
+which should return `/usr/bin/git`. Running
 
 `$ git --version`
 
 should return `git version 2.11.0 (Apple Git-81)`. Since we have those, we can now move on to installing Homebrew.
 
 ## <a name="2">Homebrew</a>
-Homebrew is the a package manager that should be in every developer's toolbox. From here you can effectively manage hundreds of packages, each of which is useful for development. Many major languages and runtimes have their packages registered with Homebrew (think Python, Node.js, etc.) as well as countless other useful programs.
+Homebrew is the package manager that should be in every developer's toolbox. From here you can effectively manage hundreds of packages, each of which is useful for development. Many major languages and runtimes have their packages registered with Homebrew (think Python, Node.js, etc.) as well as countless other useful programs.
 
 ### <a name="2.1">Installation</a>
 To install Homebrew, copy this command and paste it into Terminal. 
@@ -113,7 +113,7 @@ Make sure to take a look at the man page and find some other commands that could
 This is the section we've all been waiting for - installing Python. It's actually quite simple, and there shouldn't be too many hiccups. We'll go over how to install both versions of Python (2.7.x and 3.x.x) as well as any errors you may encounter.
 
 ### <a name="3.0">Warnings</a>
-- Do *not* use `sudo` when installing any Homebrew, Pip, NPM, or any other third-party packages. `/usr/local/` is for locally installed or third-party software, and the use of `sudo` can affect the read/write permissions of `/usr/local` by changing its owner. When installing Homebrew, it asked for your password. This is for *write permissions* to `/usr/local/`. After it's installed, Homebrew takes care of this for you by installing packages in `/usr/local/Cellar/` and then creating symlinks to executable files and placing them in `/usr/local/`, whose permissions are managed by Homebrew.
+- Do *not* use `sudo` when installing any Homebrew, Pip, NPM, or any other third-party packages. `/usr/local/` is for locally installed or third-party software, and the use of `sudo` can affect the read/write permissions of `/usr/local/` by changing its owner. When installing Homebrew, it asked for your password. This is for *write permissions* to `/usr/local/`. After it's installed, Homebrew takes care of this for you by installing packages in `/usr/local/Cellar/` and then creating symlinks to executable files and placing them in `/usr/local/`, whose permissions are managed by Homebrew.
 
 - There is a difference between `python`, `python3`, `pip`, and `pip3`. `python` and `pip` run scripts and install packages for Python 2.x respectively, while `python3` and `pip3` run scripts and install packages for Python 3.x.x respectively.
 
@@ -142,12 +142,12 @@ However, Pip is extremely useful, and [the man page](https://pip.pypa.io/en/stab
 
 ### <a name="3.4">Errors</a>
 
-If `$ brew install python` or `$brew install python3` gives you an error saying that:
+If `$ brew install python` or `$ brew install python3` gives you an error saying that:
 
 - The bottle can't be compiled because `gcc` is not installed, run `$ xcode-select --install` to install Apple Command Line Tools (which includes `gcc`, the GNU Compiler Collection). Then, run `$ brew install python3`.
 - `/usr/local/bin` may not be writable, change the permissions of the directory by running ``$ sudo chown -R `whoami` /usr/local/``.
 
-If `$ which python` or `$ which python3` doesn't return `/usr/local/bin/python/` or `/usr/local/bin/python3` respectively, or when you run `$ python` or `$ python3` you get a `command not found` error, there may be a linking issue. Follow these instructions in order, and stop when the problem is fixed.
+If `$ which python` or `$ which python3` doesn't return `/usr/local/bin/python` or `/usr/local/bin/python3` respectively, or when you run `$ python` or `$ python3` you get a `command not found` error, there may be a linking issue. Follow these instructions in order, and stop when the problem is fixed.
 
 1. Run `$ brew doctor` to find any problems, and then run `$ brew unlink python && brew link python` (or `python3`) to try and rewrite the existing symlinks.
 2. Run `$ brew link --dry-run --overwrite python` (or `python3`) to check if a `python3` already exists in `/usr/local/bin/`. If it does, you can overwrite it by running `$ brew link --overwrite python`.
